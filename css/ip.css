@@ -1,0 +1,783 @@
+/******************************************
+/* IP CSS
+/*******************************************/
+/* Clear fix hack */
+
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Prata', serif;
+font-family: 'Lobster', cursive;*/
+
+
+@-webkit-keyframes fontfix {
+  from { opacity: 1; }
+  to { opacity: 1; }
+}
+
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+body {
+  color: #000000;
+  line-height: 1.8;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+/**********HEADER************************************************/
+header {
+  /*background: #ffffff;*/
+  padding: 25px 0;
+  height: 100px;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255,.90);
+}
+
+#headerlogo {
+  width: 30%;
+  margin: 6px 0 0;
+  float: left;
+}
+
+/*NAVIGATION***************/
+        /*Hamburger icon***************/
+
+.hamburger-button {
+  position: fixed;
+  right: 30px;
+  width: 44px;
+  height: 40px;
+  padding-right: 30px;
+  transition: .25s;
+  z-index: 12;
+  }
+
+.hamburger-button:hover {
+  cursor: pointer;
+}
+.hamburger-button .menu-bar {
+  position: absolute;
+  border-radius: 2px;
+  width: 80%;
+  transition: .5s;
+
+}
+.hamburger-button .menu-bar-top {
+  border: 4px solid #000000;
+  border-bottom: none;
+  top: 0;
+}
+.hamburger-button .menu-bar-middle {
+  height: 4px;
+  background-color: #000000;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  top: 4px;
+}
+.hamburger-button .menu-bar-bottom {
+  border: 4px solid #000000;
+  border-top: none;
+  top: 22px;
+}
+.button-open .menu-bar-top {
+  transform: rotate(45deg) translate(8px, 8px);
+  transition: .5s;
+}
+.button-open .menu-bar-middle {
+  transform: translate(230px);
+  transition: .1s ease-in;
+  opacity: 0;
+}
+.button-open .menu-bar-bottom {
+  transform: rotate(-45deg) translate(8px, -7px);
+  transition: .5s;
+}
+
+        /*menu items***************/
+.menu-wrap {
+    background-color: #E8E8E8;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 280px;
+    
+    font-size: 1em;
+    font-weight: 700;
+    overflow: auto;
+    transition: .25s;
+    z-index: 10;
+    padding: 100px 30px 0 0;
+/*    float:right;*/
+    display:none;
+}
+
+        /****************/
+.menu-show {
+    margin-right: 0;
+/*    box-shadow: 4px 2px 15px 1px #b2adad;*/
+}
+
+.menu-sidebar {
+  text-align: right;
+}
+
+.menu-sidebar li > a {
+  color: #000000;
+  font-size: 1.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+ /* position: relative;*/
+  line-height: 3;
+}
+
+.menu-sidebar li > a:hover::after {
+  background-position: -100% 0;
+}
+.menu-sidebar .menu-item-has-children {
+  position: relative;
+}
+.menu-sidebar .menu-item-has-children .sub-menu {
+  display: none;
+}
+/*.sidebar-menu-arrow::after {
+  content: "\f107";
+  font-family: 'FontAwesome';
+  padding: 10px;
+  color: #FFFA3B;
+  position: relative;
+}
+.sidebar-menu-arrow:hover::after {
+  cursor: pointer;
+  color: #fff;
+}
+.sidebar-menu-arrow:active::after {
+  top: 2px;
+}*/
+        /****************/
+
+
+
+
+        /****************/
+/*header nav {
+  float: right;
+  margin-top: 0px;
+}
+
+header nav ul {
+  margin-top: 0px;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 0 0 30px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+header nav ul li a {
+  color: #000000;
+}*/
+
+/**********HERO************************************************/
+#hero {
+  height: 700px;
+  background-color: #ffffff;
+  background: url(../images/imac-workspace-mock-up-freebie-free-download-2.jpg) no-repeat #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+/*  padding-top: 50px;*/
+}
+
+#hero h2 {
+  font-size: 9.375em;
+  color: #4dbed8;
+  text-transform: uppercase;
+  margin-top: 100px;
+/*  margin: auto;*/
+  line-height: .9;
+  font-weight: 700;
+}
+
+#hero hr {
+width: 20%;
+margin-left: 0;
+margin-right: auto;
+margin-top: 50px;
+height: 30px;
+background-color:#000000;
+color:#000000;
+border: 0 none;
+}
+
+.int-hero {
+  font-size: 6.375em; 
+  text-transform: uppercase;
+  margin-top: 100px;
+  line-height: .9;
+  font-weight: 700;
+  padding-top: 200px;
+}
+
+
+.int-hero hr {
+width: 20%;
+margin-left: 0;
+margin-right: auto;
+margin-top: 50px;
+height: 30px;
+background-color:#ffffff;
+color:#ffffff;
+border: 0 none;
+}
+
+#introduction {
+  background-color: #4dbed8;
+  color: #ffffff;
+  height: 700px;
+  padding: 60px 0;
+}
+
+#introduction h2 {
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+
+#introduction .container {
+  padding: 60px 0;
+}
+
+/*#introsection #herointro {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+
+  padding-bottom: 30px;
+}
+*/
+/*#introsection {
+  font-size: 14px;
+  text-align: right;
+  color: #000000;
+  margin: auto;
+  font-family: 'Prata', serif;
+  padding: 30px 100px;
+  line-height: 1.5;
+}*/
+
+
+#intro_paragraph {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  padding: 0 80px;
+  margin-bottom: 70px;
+}
+
+ .button_white a:link, a:visited  { 
+  font-weight: 600;
+  border-width: 1px;
+  padding: 12px 0;
+  width: 250px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;  
+  display: block;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+ .button_white a:hover, a:active  {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
+    /**********Case Study page ******************/
+
+.int-hero h5 {
+  color: #ffffff;
+  font-size: 0.15em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+
+#case_study {
+  height: 800px;
+  padding: 60px 0;
+}
+
+
+#case_study h2 {
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+
+#case_study .container {
+  padding: 60px 0;
+}
+
+.casestudy-2 .cs00{
+  padding-top: 50px;
+  text-align: left;
+  width: 100%;
+  height: 100%; 
+}
+
+.cs00 {
+  float: left;
+  padding-top: 5%;
+}
+
+
+    /**********Renaissance Tile and Bath******************/
+
+.int-hero #rtb {
+  color: #ffffff;
+}
+
+.int-hero #rtb_caption {
+  color: #ffffff;
+  text-transform: none;
+  font-style: italic;
+  font-size: 0.2em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.25;
+}
+
+#rtb-image {
+  height: 700px;
+  background-color: #ffffff;
+  background: url(../images/rtb_02.jpg) no-repeat #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.rtb_intro {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
+    /**********Who WE SERVE******************/
+#whoWeServe-image {
+  height: 700px;
+  background: url(../images/03-o.jpg) no-repeat #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.int-hero #whoWeServe_headline {
+  color: #4dbed8;
+}
+
+.int-hero #whoWeServe_hr {
+  width: 20%;
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 50px;
+  height: 30px;
+  background-color:#4dbed8;
+  color:#4dbed8;
+  border: 0 none;
+}
+
+.int-hero #whoWeServe_caption {
+  color: #4dbed8;
+  text-transform: none;
+  font-style: italic;
+  font-size: 0.2em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.25;
+}
+
+
+#headline {
+  font-size: 50px;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 50px 0;
+
+}
+
+.twoTextColumns {
+ color: #000000;
+}
+
+#textColumn_A {
+  float: left;
+  width: 47%;
+}
+
+#textColumn_B {
+  float: right;
+  width: 47%;
+}
+
+
+/**********FEATURES************************************************/
+/*.clearfix: {
+  overflow: auto;
+}*/
+
+}
+.clear {
+  clear: both;
+}
+
+.img_left {
+  float: left;
+  margin: 0 50px 0 0;
+}
+
+.img_cs {
+  width: 100%;
+/*  height:50%;*/
+}
+
+
+
+
+.casestudy {
+  padding-top: 50px;
+  text-align: left;
+  width: 50%;
+  height: 600px; 
+}
+
+#overlay {
+  background-color:red;
+  height: 100%
+  width: 100%;
+/*  text-align:center;*/
+/*  padding:45px 0 66px 0;*/
+  opacity:0;
+}
+
+.img_cs :hover #overlay {
+  opacity:1;
+}
+
+/*#view {
+  font-size: 20px
+  font-weight: 600;
+}*/
+
+
+#casestudy_h {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#casestudy_p {
+  font-weight: 200;
+  font-size: 14px;
+  overflow: auto;
+}
+
+#view_casestudy a {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 70%;
+  color: #000000;
+}
+
+#view_casestudy a:hover {
+  color: #4dbed8;
+}
+
+.casestudy hr {
+width: 10%;
+margin-left: 0;
+margin-right: auto;
+height: 5px;
+background-color:#000000;
+color:#000000;
+border: 0 none;
+}
+
+.cs01 {
+  float: left;
+  padding-right: 3%;
+}
+
+.cs02 {
+  float: right;
+  padding-left: 3%;
+}
+
+
+
+
+
+
+/**********TESTIMONIAL************************************************/
+
+#testimonial-section {
+  background-image: url(../images/umupv2w-o.jpg);
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  clear: both;
+}
+
+blockquote {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  padding: 100px 80px 0;
+  margin-bottom: 70px; 
+}
+
+blockquote #testi-name {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  color: #4dbed8;
+  line-height: 3.0;
+}
+
+blockquote #testi-company {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/**********PREVIOUS NEXT************************************************/
+
+
+
+#box    {  
+  width: 50%;
+  height: 200px;
+  font-weight:700;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5%;
+}
+
+a.rtb:hover, a.rtb:active {
+  color: #4dbed8;
+  font-style: italic;
+  text-transform: none;
+}
+
+.previous {
+  float: left;
+}
+
+.next {
+  float: right;
+}
+
+
+/*********FORM***********************************************/
+
+#hero_2 {
+  height: 700px;
+  background: url(../images/pz9j07.jpg) no-repeat #000000;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 200px;
+}
+
+#field_01 {
+  border: 0;
+  margin: 50px 0;
+  padding: 0;
+}
+
+
+form {
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+#field_01 label {
+  display: block;
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+#field_01 input {
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  width: 80%;
+  border: 0;
+  border-bottom: 3px solid #000000;
+}
+#details {
+  width: 80%;
+  height: 200px;
+  font-size: 16px;
+  font-weight: 200;
+  color: #cccccc;
+}
+
+#required {
+  font-size: 14px;
+  color: #4dbed8;
+  font-style: italic;
+  font-weight: 600;
+}
+
+#checkboxes {
+  width: 80%;
+}
+
+#checkboxes input {
+  display: inline;
+  padding: 0px;
+  margin: 0;
+  width: 30px;
+}
+
+.submitbtn {
+  background-color: #4dbed8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/*FORM_RESPONSIVE CODE*****
+
+@media only screen and (min-width : 300px) and (max-width : 768px) {
+
+  #field_01 input {
+    width: 100%;
+  }
+
+  #details {
+    width: 100%;
+  }
+
+  #choosefile {
+    border: 0px;
+  }
+}
+
+/**********FOOTER************************************************/
+
+#CallToAction {
+  height: 350px;
+  padding-top: 50px;
+  background-color: #4dbed8;
+  clear: both;
+}
+
+#CallToAction h2 {
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+#CallToAction #intro_paragraph {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0 80px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* .button_white a:link, a:visited  { 
+  font-weight: 600;
+  border-width: 1px;
+  padding: 12px 0;
+  width: 250px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;  
+  display: block;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+ .button_white a:hover, a:active  {
+  background-color: #000000;
+  color: #ffffff;
+}
+*/
+
+/**********FOOTER************************************************/
+
+footer {
+
+  background-color: #000000;
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+  /*padding-bottom: 50px;*/
+}
+
+#footerlogo {
+padding-top: 20px;
+width: 30%;
+float: left;
+}
+
+#copyright p {
+  font-size: 0.70em;
+  color: #ffffff;
+  text-align: right;
+}
+
+#copyright {
+  padding-top: 20px;
+  float: right;
+}
+
+
+
